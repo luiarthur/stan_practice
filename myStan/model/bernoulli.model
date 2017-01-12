@@ -1,0 +1,18 @@
+Data {
+  int N
+  real y[N]
+}
+
+Param {
+  real mu
+  real<lower=0> sig2
+}
+
+Like {
+  y[i] | mu, sig2 ~ Normal(y | mu, sig2)
+}
+
+Prior {
+  mu ~ Normal(0,100)
+  sig2 ~ IG(2,1)
+}
