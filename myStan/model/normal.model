@@ -1,11 +1,11 @@
 Data {
   int N
-  real y[N]
+  NumericVector y
 }
 
 Param {
-  real mu
-  real<lower=0> sig2
+  double mu
+  double sig2
 }
 
 Like {
