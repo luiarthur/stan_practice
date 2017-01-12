@@ -2,32 +2,20 @@
 
 // refer to model3/ purity3.cpp for examples
 
-struct State {
-  /*state-core*/
-};
-
 //[[Rcpp::export]]
-NumericMatrix /*fn-name*/(/*fn-args*/ , int B, int burn, int printEvery) {
+NumericMatrix /*fn-name*/(/*fn-args*/ , int mcmc_iterations, int burn, int printEvery) {
 
   /*fn-pre-computes*/
   //const int N = y.size();
 
-  auto update = [&] (State& s_old, State& s_new) {
-    /*update-core*/
-    // update mu
-    // s_new.mu = rnorm(0,1)
-  };
-
   // preallocate output
   List ret;
 
-  /*init-state-fields*/
-  // double init_mu=0;
+  //gibbs
+  for (int mcmc_it=0; mcmc_it<mcmc_iterations;  mcmc_it++) {
+    /*gibbs-core*/
+  } 
 
-  auto init = State {
-    /*init-state-core*/
-    // init_mu
-  };
 
   // e.g. NumericMatrix / NumericVector
   /*R-data-struct*/
